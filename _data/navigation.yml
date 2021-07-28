@@ -3,4 +3,6 @@ main:
   - title: "Categories"
     url: /categories/
   - title: "TIL"
+    url: /til-list/
+  - title: "MyProject"
     url: /posts/

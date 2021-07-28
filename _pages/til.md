@@ -1,6 +1,6 @@
 ---
-title: "TIL List"
-layout: posts
-permalink: /posts/
-author_profile: true
+title: TIL
+layout: collection
+permalink: /til-list/
+collection: til
 ---
