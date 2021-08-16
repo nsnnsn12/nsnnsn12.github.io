@@ -40,7 +40,7 @@ toc_sticky: true # 마우스 스크롤과 함께 내려갈 것인지 설정
 ```java
 public final int N = 19;
 public int[][] map = new int[N][N];
-public int[][] move = {{-1,-1},{1,1},{-1,0},{1,0},{1,-1},{-1,1},{0,-1},{0,1}};
+public int[][] move = {%raw%}{{-1,-1},{1,1},{-1,0},{1,0},{1,-1},{-1,1},{0,-1},{0,1}}{%endraw%};
 public int[] result() {
     int[] rel = new int[3];
     rel[0] = 0;
