@@ -41,7 +41,7 @@ public int[][] map;
 public void result() {
     //n과 m 중 최소 길이가 2의 배수이기에 가능
     int count = Math.min(N, M) / 2;
-    int[][] MOVE = {{1,0},{0,1},{-1,0},{0,-1}};
+    int[][] MOVE = {%raw%}{{1,0},{0,1},{-1,0},{0,-1}}{%endraw%};
     //각 줄의 갯수마다 배열을 만든다
     ArrayList<ArrayList<Integer>> list = new ArrayList<ArrayList<Integer>>();
     //각 줄마다 배열 옮기기
