@@ -1,5 +1,5 @@
 ---
-title: '리눅스 서버 구축하기 - 1'
+title: '리눅스 서버 구축 1(리눅스 설치)'
 layout: single
 author_profile: true
 read_time: true
@@ -17,7 +17,7 @@ toc_sticky: true # 마우스 스크롤과 함께 내려갈 것인지 설정
 ---
 
 ## 목표
-1. Linux 서버를 구축한다.
+1. 남는 노트북을 Linux 서버로 사용한다.
 2. 해당 서버에 CICD 파이프라인을 구축한다.
 3. 헤딩 서버에 Vs code server를 구축한다.
 
@@ -31,8 +31,10 @@ toc_sticky: true # 마우스 스크롤과 함께 내려갈 것인지 설정
 > 참고 자료
 > - https://docs.rockylinux.org/guides/installation/
 
-### boot usb 만들기
+### booting usb 만들기
 
 ### install하기
 
 ### 방화벽 설정하기
+
+https://askubuntu.com/questions/1061883/how-can-i-keep-the-network-up-when-i-close-my-laptop-lid
