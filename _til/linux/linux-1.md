@@ -50,7 +50,6 @@ toc_sticky: true # 마우스 스크롤과 함께 내려갈 것인지 설정
 <https://stricky.tistory.com/135>
 
 ### SSH 설정하기
-<https://jumpcloud.com/blog/how-to-configure-secure-ssh-server-rocky-linux>
 
 #### SSH란 무엇인가?
 
@@ -146,6 +145,9 @@ sudo systemctl restart sshd
 ssh -p 설정한_SSH_PORT username@server_ip_address
 ```
 
+>참고자료
+<https://jumpcloud.com/blog/how-to-configure-secure-ssh-server-rocky-linux>
+
 ### 노트북 닫았을 때도 실행 상태유지 하기
 
 ```bash
@@ -164,5 +166,19 @@ systemctl restart systemd-logind.service
 ```
 
 ### 가상화 설정하기
+
+![Modify SSH Port](/assets/images/linux/ssh2.png "SSH 포트 변경")
+
+>참고자료
+<https://docs.rockylinux.org/guides/virtualization/cockpit-machines/>
+<https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/9/html/configuring_and_managing_virtualization/configuring-virtual-machine-network-connections_configuring-and-managing-virtualization>
+<https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/9/html/configuring_and_managing_networking/configuring-a-network-bridge_configuring-and-managing-networking#configuring-a-network-bridge-by-using-nmcli_configuring-a-network-bridge>
+
+#### 용어 정리
+
+- 인바운드와 아웃바운드
+  - 트래픽에 네트워크 간에 이동하는 방향을 의미  
+    인바운드: 트래픽이 들어오는 것(요청받는 것)
+    아웃바운드: 트래픽이 나가는 것(요청하는 것)
 
 ### 방화벽 설정하기
