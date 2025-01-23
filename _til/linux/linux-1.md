@@ -27,9 +27,8 @@ toc_sticky: true # 마우스 스크롤과 함께 내려갈 것인지 설정
 3. 네트워크 공부를 실전적으로 하고 싶다.
 4. Cloud는 돈이 든다.
 
-> 참고 자료
-
-- <https://docs.rockylinux.org/guides/installation/>
+> 참고 자료  
+> <https://docs.rockylinux.org/guides/installation/>
 
 ## 1. booting usb 만들기
 
@@ -40,8 +39,8 @@ toc_sticky: true # 마우스 스크롤과 함께 내려갈 것인지 설정
 2. 다운받은 ISO로 usb 부팅 디스크 만들기
     참고링크: <https://rufus.ie/ko/>
 
-> rocky linux download 페이지
-- <https://www.rockylinux.org/download/>
+> rocky linux download 페이지  
+> <https://www.rockylinux.org/download/>
 
 ## 2. install하기 (최소 설치)
 
@@ -49,10 +48,12 @@ toc_sticky: true # 마우스 스크롤과 함께 내려갈 것인지 설정
 
 ### su와 sudo의 차이
 
-- su(Switch User) => 현재 계정을 로그아웃하지 않고 다른 계정으로 전환
-- sudo(SuperUser Do)
-    현재 계정에서 단순히 root 권한 만을 빌리는 것
-    즉, 하나의 명령에 대하여 일시적으로 root 권한을 사용하는 것.
+su(Switch User)  
+현재 계정을 로그아웃하지 않고 다른 계정으로 전환
+
+sudo(SuperUser Do)  
+현재 계정에서 단순히 root 권한 만을 빌리는 것
+즉, 하나의 명령에 대하여 일시적으로 root 권한을 사용하는 것.
 
 안전성을 위해 sudo를 사용하는 것이 권장된다.  
 하지만 계정이 sudo 명령어를 사용하기 위해서는 권한을 허용해주는 절차가 필요하다.
@@ -88,15 +89,3 @@ HandleLidSwitch=ignore
 -- config 설정 반영
 systemctl restart systemd-logind.service
 ```
-
-
-## 4. 가상화 설정하기
-
-![Modify SSH Port](/assets/images/linux/ssh2.png "SSH 포트 변경")
-
->참고자료
-<https://docs.rockylinux.org/guides/virtualization/cockpit-machines/>
-<https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/9/html/configuring_and_managing_virtualization/configuring-virtual-machine-network-connections_configuring-and-managing-virtualization>
-<https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/9/html/configuring_and_managing_networking/configuring-a-network-bridge_configuring-and-managing-networking#configuring-a-network-bridge-by-using-nmcli_configuring-a-network-bridge>
-
-## 방화벽 설정하기
