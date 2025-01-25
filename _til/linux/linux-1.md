@@ -15,9 +15,6 @@ toc_label: "table of content" # toc 이름 설정
 toc_icon: "bars" # 아이콘 설정
 toc_sticky: true # 마우스 스크롤과 함께 내려갈 것인지 설정
 ---
-
-# 리눅스 서버 구축 1(리눅스 설치)
-
 ## 목표
 
 1. 남는 노트북을 Linux 서버로 사용한다.
