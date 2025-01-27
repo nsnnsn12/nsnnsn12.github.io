@@ -113,26 +113,38 @@ sudo systemctl restart sshd
 ssh -p 설정한_SSH_PORT username@server_ip_address
 ```
 
-8 루트 권한 로그인 비활성화 및 접근 유저 제한
+### Step 3: 루트 권한 로그인 비활성화 및 접근 유저 제한
+
+sshd_config 옵션 변경
 
 ```bash
 sudo vi /etc/ssh/sshd_config
+
+-- 루트 로그인 권한 비활성화
+-- PermitRootLogin no
+
+-- 접근 유저 제한
+-- 맨 마지막 줄에 옵션 추가
+-- AllowUsers {username}
+
+-- 수정한 sshd_config 파일 적용
+sudo systemctl restart sshd
 ```
 
-PermitRootLogin 찾아 옵션 no로 바꾸기
+### Step 3: ssh key 설정 및 password login 제한하기
 
-맨 마지막 줄로 내려가서 유저 제한 설정 추가하기  
-AllowUsers {username}
+1 ssh public and private key 발급  
+  필자는 MobaXterm을 사용하여 발급했다.
 
-9 ssh key 설정 및 password login 제한하기
+2 public key 원격 머신에 등록하기  
+ssh key 관리 파일 경로: ~/.ssh/authorized_keys  
+public key를 복사하여 해당 파일에 붙여 넣는다.
+없는 경우 폴더와 파일을 새로 만든다.
 
-- ssh public and private key 발급
-  - 필자는 MobaXterm을 사용하여 발급했다.
-- public key 복사하여 authorized_keys 파일에 붙여 넣기, 없으면 새로 만들기
-  - 경로: ~/.ssh/authorized_keys
-- MobaXterm session 생성 시 use private key 체크
+3 ssh 로그인 시 private key 사용
+필자는 MobaXterm을 사용하고 있음으로 MobaXterm session 생성 시 use private key 체크
 
-10 패스워드 로그인 비활성화
+4 패스워드 로그인 비활성화
 
 ```bash
 sudo vi /etc/ssh/sshd_config
